@@ -26,8 +26,28 @@ explore the API. -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.7.0"> </script>
   </head>
   <body>
+    <div>
+    <form class="form-horizontal well">
+      <legend>
+        <h3>
+          <div id="title">HTML5 File API</div>
+        </h3>
+      </legend>
+      <fieldset>
+          <label for="csvFileInput"> <strong>CSV File:</strong>
+          </label>
+          <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"
+          accept=".csv">
+        </div>
+      </fieldset>
+    </form>
+    <div id="output">
+    </div>
+  </div>
+
     <h4>Tiny TFJS example<hr/></h4>
     <div id="micro_out_div"></div>
     <script src="./index.js"> </script>
+    <script type="text/javascript" src="/read-csv.js"></script>
   </body>
 </html>
