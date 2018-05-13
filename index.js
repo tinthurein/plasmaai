@@ -38,8 +38,8 @@ async function myFirstTfjs() {
   def read_dataset(filePath,delimiter=','):
     return genfromtxt(filePath, delimiter=delimiter)
 
-  const xs = tf.tensor2d(read_dataset('input_data.csv'));
-  const ys = tf.tensor2d(read_dataset('output_data.csv'));
+  const xs = tf.tensor2d(read_dataset('test_inputs.csv'));
+  const ys = tf.tensor2d(read_dataset('test_outputs.csv'));
 
   // Train the model using the data.
   await model.fit(xs, ys, {epochs: 250});
